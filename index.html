@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>いつでもチャーコAR｜AIの相棒がいる生活、はじまります。</title>
+<meta name="description" content="天気・予定・メモ・ニュース・占い・冒険。スマホだけでも、SABERAグラスでも使える、AIの相棒アプリ「いつでもチャーコAR」。">
+<meta property="og:title" content="いつでもチャーコAR">
+<meta property="og:description" content="便利も、楽しさも。あなたの毎日に、AIの相棒を。スマホだけでも、SABERAグラスでも。">
+<meta property="og:image" content="https://charco-project.github.io/assets/hero.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&amp;family=M+PLUS+Rounded+1c:wght@400;500&amp;family=Noto+Sans+JP:wght@400;700&amp;display=swap">
+<style>
+body{margin:0;background:#060a07}
+a{color:#7dff9a}a:hover{color:#b8ffc8}
+.sec{max-width:1080px;margin:0 auto;padding:clamp(64px,10vw,96px) 20px 0;scroll-margin-top:16px}
+.kicker{font-family:'DotGothic16',sans-serif;color:#7dff9a;font-size:15px;letter-spacing:.2em;margin:0 0 10px}
+.h2{font-family:'M PLUS Rounded 1c',sans-serif;color:#7dff9a;font-size:clamp(26px,5.5vw,36px);line-height:1.45;margin:0 0 20px;font-weight:500}
+.h3{font-family:'M PLUS Rounded 1c',sans-serif;color:#7dff9a;font-size:21px;line-height:1.5;margin:0 0 8px;font-weight:500}
+.p{color:#e6f2ea;font-size:17px;line-height:1.9;margin:0 0 14px}
+.muted{color:#a9bdb0;font-size:14px;line-height:1.8;margin:0}
+.card{background:#0d140f;border:1px solid #1f3a24;border-radius:14px;padding:22px 24px}
+.phone{width:100%;max-width:min(220px,80vw);border-radius:22px;border:6px solid #1b1f1c;display:block}
+.glass{width:100%;border-radius:10px;border:1px solid #1f3a24;display:block}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:999px;font-size:16px;font-weight:700;text-decoration:none}
+.li{color:#e6f2ea;font-size:16px;line-height:1.8;margin:0 0 6px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;margin:0 6px 8px 0}
+.both{background:#123b1e;color:#b8ffc8}
+.glassonly{background:#2a2410;color:#f3e6a8}
+.free{background:#0f2a33;color:#a8e6f3}
+.tile{display:block;text-decoration:none;background:#0d140f;border:1px solid #1f3a24;border-radius:12px;padding:16px 18px;min-height:44px}
+.tile b{display:block;font-family:'M PLUS Rounded 1c',sans-serif;font-weight:500;color:#7dff9a;font-size:19px;margin-bottom:4px}
+.tile span{color:#e6f2ea;font-size:14px;line-height:1.6}
+.cat{font-family:'M PLUS Rounded 1c',sans-serif;font-weight:500;color:#a9bdb0;font-size:16px;margin:28px 0 10px}
+.big{font-family:'M PLUS Rounded 1c',sans-serif;font-weight:500;color:#7dff9a;font-size:clamp(48px,10vw,72px);line-height:1;margin:0}
+.stat{background:#0d140f;border:1px solid #1f3a24;border-radius:14px;padding:20px 16px;text-align:center;text-decoration:none;display:block}
+.stat .n{font-family:'M PLUS Rounded 1c',sans-serif;font-weight:500;font-size:clamp(30px,6vw,40px);line-height:1.1;margin:0 0 6px}
+.stat .t{color:#e6f2ea;font-size:16px;font-weight:700;margin:0 0 2px}
+.stat .s{color:#a9bdb0;font-size:13px;margin:0}
+.back{display:inline-flex;align-items:center;min-height:44px;color:#a9bdb0;font-size:14px;text-decoration:none;margin-top:20px}
+.back:hover{color:#7dff9a}
+@media (min-width:768px){.g75{width:75%;margin-left:auto;margin-right:auto}}
+</style>
+
+</head>
+<body>
+<div style="font-family: 'Noto Sans JP', sans-serif; background: #060a07; color: #e6f2ea; padding-bottom: 96px">
+
+<header style="background: #ffffff">
+<img src="assets/hero.png" alt="いつでもチャーコAR　AIの相棒がいる生活、はじまります。スマホだけでも、SABERAグラスでも。暮らし・仕事・遊び、ひとつのアプリに" style="display: block; width: 100%; max-width: 1280px; margin: 0 auto; height: auto">
+</header>
+<nav aria-label="ページ内の案内" style="max-width: 1080px; margin: 0 auto; padding: 20px 20px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px">
+<a class="btn" href="#features" style="background: #7dff9a; color: #06210f">できることを見る</a>
+<a class="btn" href="#f-astro" style="border: 2px solid #7dff9a; color: #7dff9a">アプリの特長を見る</a>
+<a class="btn" href="#tester" style="border: 2px solid #7dff9a; color: #7dff9a">テスター募集を見る</a>
+</nav>
+
+<section class="sec" style="padding-top: 56px; text-align: center">
+<h1 style="font-family: 'M PLUS Rounded 1c', sans-serif; color: #7dff9a; font-size: clamp(28px, 6vw, 42px); line-height: 1.5; margin: 0 0 16px; font-weight: 500">便利も、楽しさも。<br>あなたの毎日に、AIの相棒を。</h1>
+<p class="p">天気・予定・メモ・ニュース・占い・冒険。<br>暮らしに役立つ機能から、遊び心いっぱいの体験まで、ひとつのアプリに。</p>
+<p class="p" style="color: #7dff9a; font-weight: 700">AIとおしゃべりするだけじゃない。毎日つかえる道具も、遊べる物語も。</p>
+<div class="card" style="display: inline-block; margin-top: 12px; padding: 18px 28px; border: 2px solid #7dff9a">
+<p style="font-family: 'M PLUS Rounded 1c', sans-serif; color: #7dff9a; font-size: 24px; font-weight: 500; margin: 0 0 4px">SABERAがなくても楽しめます。</p>
+<p class="p" style="margin: 0">スマートグラスにも、スマホだけにも対応。</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 32px; text-align: center">
+<a class="stat" href="#f-adv" style="border-color: #4a3f1c"><p class="n" style="color: #f2cf6b">39種類</p><p class="t">冒険のエンディング</p><p class="s">選択で変わる物語</p></a>
+<a class="stat" href="#f-astro" style="border-color: #3a2f5c"><p class="n" style="color: #c4b0ff">5つの運勢</p><p class="t">本物の天体位置から</p><p class="s">毎日の星読み</p></a>
+<a class="stat" href="#f-bosai" style="border-color: #5a3f14"><p class="n" style="color: #ffb54d">ずっと無料</p><p class="t">防災の知らせ</p><p class="s">気象庁の情報を活用</p></a>
+<a class="stat" href="#f-phone" style="border-color: #1f3a24"><p class="n" style="color: #7dff9a">グラス不要</p><p class="t">スマホだけで楽しめる</p><p class="s">SABERAにも対応</p></a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 28px">
+<a class="tag both" href="#f-weather" style="font-size: 15px; padding: 8px 16px; text-decoration: none">天気</a>
+<a class="tag both" href="#f-daily" style="font-size: 15px; padding: 8px 16px; text-decoration: none">予定</a>
+<a class="tag both" href="#f-daily" style="font-size: 15px; padding: 8px 16px; text-decoration: none">メモ</a>
+<a class="tag both" href="#f-work" style="font-size: 15px; padding: 8px 16px; text-decoration: none">テレプロンプト</a>
+<a class="tag both" href="#f-work" style="font-size: 15px; padding: 8px 16px; text-decoration: none">音声記録</a>
+<a class="tag both" href="#f-bosai" style="font-size: 15px; padding: 8px 16px; text-decoration: none">防災</a>
+<a class="tag both" href="#f-talk" style="font-size: 15px; padding: 8px 16px; text-decoration: none">ニュース</a>
+<a class="tag both" href="#f-astro" style="font-size: 15px; padding: 8px 16px; text-decoration: none">天体占い</a>
+<a class="tag both" href="#f-adv" style="font-size: 15px; padding: 8px 16px; text-decoration: none">冒険</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 32px">
+<a class="btn" href="#download" style="background: #7dff9a; color: #06210f">Google Playで見る（準備中）</a>
+<a class="btn" href="#tester" style="border: 2px solid #7dff9a; color: #7dff9a">テスターになる</a>
+</div>
+</section>
+
+<section class="sec" id="f-phone">
+<p class="kicker">PHONE ONLY</p>
+<h2 class="h2">グラスがなくても、だいじょうぶ。</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+<div style="flex: 999 1 480px; min-width: 0">
+<p class="p">いつでもチャーコARは、スマホだけで使えるアプリです。スマートグラスを持っていなくても、天気も、予定も、冒険も、ぜんぶスマホの画面で楽しめます。</p>
+<p class="p"><b style="color: #7dff9a">無料でも</b>、今日の天気と防災、買い物・やることリスト、今日の月とテーマ、チャーコとのおしゃべり（1日3回）、クイズや大冒険のおためしまで。</p>
+<p class="p"><b style="color: #7dff9a">980円の買い切りで解放すると</b>、ほぼ全部の機能がスマホで使えます。</p>
+<p class="p">SABERAをつなげば、同じチャーコがグラスの中にもやってきます。</p>
+<p style="margin: 18px 0 0"><span class="tag both">スマホでもグラスでも</span><span class="tag glassonly">SABERAをつないだ時だけ</span><span class="tag free">ずっと無料</span></p>
+<p class="muted">このページでは、機能ごとにこの印を付けています。</p>
+</div>
+<div style="flex: 1 1 400px; min-width: 0; max-width: 440px; margin: 0 auto; display: flex; gap: 16px; justify-content: center">
+<img class="phone" src="assets/p_home.jpg" alt="スマホのホーム画面" style="width: calc(50% - 8px); max-width: 200px; min-width: 0">
+<img class="phone" src="assets/p_weather.jpg" alt="スマホの天気画面" style="width: calc(50% - 8px); max-width: 200px; min-width: 0">
+</div>
+</div>
+</section>
+
+<section class="sec" id="features">
+<p class="kicker">FEATURES</p>
+<h2 class="h2">ひとつのアプリで、できること。</h2>
+<p class="p">気になる機能を押すと、くわしい説明へ移動します。</p>
+<p class="cat">毎日の暮らし</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px">
+<a class="tile" href="#f-weather"><b>天気</b><span>3か所の天気と、服装のひとこと</span></a>
+<a class="tile" href="#f-daily"><b>予定</b><span>Googleカレンダーの予定もそのまま</span></a>
+<a class="tile" href="#f-daily"><b>買い物・やること</b><span>思いついた瞬間にリストへ</span></a>
+<a class="tile" href="#f-daily"><b>メモ</b><span>書いて、探して、共有</span></a>
+<a class="tile" href="#f-daily"><b>タイマー</b><span>料理や休けいに</span></a>
+</div>
+<p class="cat">もしものとき</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px">
+<a class="tile" href="#f-bosai"><b>防災</b><span>警報・台風・地震。ずっと無料</span></a>
+</div>
+<p class="cat">話す・知る</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px">
+<a class="tile" href="#f-talk"><b>チャーコと話す</b><span>疑問も相談も、おしゃべりも</span></a>
+<a class="tile" href="#f-talk"><b>チャーコ新聞・NEWS</b><span>毎日のニュースを、ひとこと付きで</span></a>
+</div>
+<p class="cat">しゃべる・記録する</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px">
+<a class="tile" href="#f-work"><b>テレプロンプト</b><span>声に合わせて原稿が進む</span></a>
+<a class="tile" href="#f-work"><b>ボイスレコーダー</b><span>録音して、文字起こしと要約</span></a>
+</div>
+<p class="cat">遊ぶ・ふしぎに出会う</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px">
+<a class="tile" href="#f-astro"><b>チャーコの天体占い</b><span>本物の天体の位置から読む</span></a>
+<a class="tile" href="#f-adv"><b>チャーコの大冒険</b><span>エンディングは39種類</span></a>
+<a class="tile" href="#f-play"><b>都市伝説クイズ</b><span>初級・中級・上級の2択</span></a>
+<a class="tile" href="#f-play"><b>探検ナビ</b><span>近くの言い伝えの場所へ</span></a>
+</div>
+<p class="cat">SABERAとの連携</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px">
+<a class="tile" href="#f-sabera"><b>首をかしげて操作</b><span>手を使わずに画面を切り替え</span></a>
+<a class="tile" href="#f-sabera"><b>ASSIST</b><span>会話から、買い物や予定をそっと提案</span></a>
+</div>
+</section>
+
+<section class="sec" id="f-astro">
+<p class="kicker" style="color: #c4b0ff">PICK UP 01</p>
+<h2 class="h2" style="color: #c4b0ff">チャーコの天体占い<br>本物の空から読む、毎日の星読み。</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 28px; margin: 4px 0 20px">
+<div style="display: flex; align-items: baseline; gap: 10px"><p class="big" style="color: #c4b0ff">5</p><p class="p" style="margin: 0; font-size: 18px">つの運勢</p></div>
+<div style="display: flex; align-items: baseline; gap: 10px"><p class="big" style="color: #c4b0ff">7</p><p class="p" style="margin: 0; font-size: 18px">つの天体を毎日計算</p></div>
+<div style="display: flex; align-items: baseline; gap: 10px"><p class="big" style="color: #c4b0ff">50</p><p class="p" style="margin: 0; font-size: 18px">回の新月・満月で検証</p></div>
+</div>
+<p><span class="tag both">スマホでもグラスでも</span></p>
+<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start">
+<div style="flex: 999 1 480px; min-width: 0">
+<p class="p">その日の月と星の位置を、天文学の計算で毎日求めています。月の形、月齢、太陽や月、水星から土星までの位置を、小数点まで。</p>
+<div class="card" style="margin: 20px 0; border-color: #3a2f5c">
+<h3 class="h3" style="color: #c4b0ff">正しさを、確かめました。</h3>
+<p class="p">計算の結果は、国立天文台が公表している暦（暦要項）と照らし合わせています。</p>
+<p class="li">・2026〜2027年の新月・満月 50回の時刻</p>
+<p class="li">・二十四節気の「中気」の時刻</p>
+<p class="p" style="margin: 8px 0 0">昔の年も、アメリカ海軍天文台のデータで確かめました。</p>
+</div>
+<p class="p">総合運・金運・仕事運・恋愛運・元気運を星の数とひとことで。ラッキーカラー、ラッキーアイテム、おすすめアクションもお届けします。朝、グラスにそっと運勢が出るのも楽しいよ。</p>
+<p class="p">誕生日を入れた時も、このスマホの中だけに保存して、外には送りません。占いは、楽しむためのもの。今日をちょっと前向きにすごす、きっかけにしてね。</p>
+<p class="muted">※国立天文台・アメリカ海軍天文台の公式なサービスではありません。公表されているデータと照らし合わせて確かめたものです。</p>
+<img class="glass g75" src="assets/g_astro.png" alt="グラスの運勢表示" style="margin-top: 24px">
+</div>
+<img class="phone" src="assets/p_astro.jpg" alt="天体占い画面（天体の情報まで）" style="flex: 1 1 220px; margin: 0 auto">
+</div>
+<a class="back" href="#features">↑ できること一覧へ戻る</a>
+</section>
+
+<section class="sec" id="f-adv">
+<p class="kicker" style="color: #f2cf6b">PICK UP 02</p>
+<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+<div style="flex: 999 1 480px; min-width: 0">
+<h2 class="h2" style="color: #f2cf6b">チャーコの大冒険<br>あなたの選択で変わる、不思議な旅へ。</h2>
+<p><span class="tag both">スマホでもグラスでも</span></p>
+<div style="display: flex; align-items: baseline; gap: 12px; margin: 8px 0 20px">
+<p class="big" style="color: #f2cf6b">39</p><p class="p" style="margin: 0; font-size: 20px">種類のエンディング</p>
+</div>
+<p class="p">世界の不思議なスポットを舞台に、チャーコと一緒に冒険！歴史の謎に触れたり、思いがけない出会いがあったり。あなたの選択で物語が変わり、エンディングはなんと39種類。どんな結末にたどり着くかは、あなた次第です。</p>
+<p class="p">「はい」か「いいえ」を選ぶだけ。グラスでは首をかしげて、スマホではボタンで進められます。</p>
+<img class="glass g75" src="assets/g_adv.png" alt="グラスの大冒険タイトル" style="margin-top: 12px">
+</div>
+<img class="phone" src="assets/p_adv.jpg" alt="スマホで大冒険を進める画面" style="flex: 1 1 220px; margin: 0 auto">
+</div>
+<a class="back" href="#features">↑ できること一覧へ戻る</a>
+</section>
+
+<section class="sec" id="f-work">
+<p class="kicker" style="color: #8fdcff">PICK UP 03</p>
+<h2 class="h2" style="color: #8fdcff">テレプロンプト・ボイスレコーダー<br>仕事にも、動画づくりにも。</h2>
+<p><span class="tag both">スマホでもグラスでも</span></p>
+<div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start">
+<div style="flex: 999 1 480px; min-width: 0; display: grid; gap: 14px">
+<div class="card" style="border-color: #1d3a4a"><h3 class="h3" style="color: #8fdcff">テレプロンプト｜原稿を覚えなくても、前を向いて話せる</h3><p class="p" style="margin: 0">スピーチ、プレゼン、動画撮影に。SABERAのグラスに原稿を表示できるので、手元の紙やスマホに何度も目を落とす必要がありません。話す声に合わせて、原稿が自動で進みます。伝えたいことに集中しながら、自然な姿勢で話せます。</p></div>
+<div class="card" style="border-color: #1d3a4a"><h3 class="h3" style="color: #8fdcff">ボイスレコーダー｜録音するだけで終わらない</h3><p class="p" style="margin: 0">会話や打ち合わせ、思いついたアイデアを録音。あとから文字起こしや要約ができるので、聞き直しや内容の整理にも便利です。長い録音から、大切なポイントを振り返りやすくなります。共有もできます。カラオケの練習にも最適です。</p></div>
+<img class="glass g75" src="assets/g_tele.png" alt="グラスのテレプロンプト（音声スクロール）">
+</div>
+<img class="phone" src="assets/p_voice.jpg" alt="ボイスレコーダー画面" style="flex: 1 1 220px; margin: 0 auto">
+</div>
+<a class="back" href="#features">↑ できること一覧へ戻る</a>
+</section>
+
+<section class="sec" id="f-bosai">
+<p class="kicker" style="color: #ffb54d">PICK UP 04</p>
+<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+<div style="flex: 999 1 480px; min-width: 0">
+<p class="big" style="color: #ffb54d; font-size: clamp(40px, 9vw, 64px); margin-bottom: 12px">ずっと無料</p>
+<h2 class="h2" style="color: #ffb54d">防災の知らせは、誰でも。</h2>
+<p><span class="tag free">ずっと無料</span><span class="tag both">スマホでもグラスでも</span></p>
+<p class="p">気象庁の情報をもとに、警報・注意報、接近する台風、最近の地震を確認できます。日頃の備えにも、いざというときの情報確認にも。スマホの通知でもお知らせします。</p>
+<p class="p">命にかかわる情報だから、980円の解放とは関係なく、誰でもずっと使えるようにしました。</p>
+<p class="muted">※緊急地震速報は配信しません。避難などの判断は、気象庁や自治体などの公式の情報にしたがってください。</p>
+</div>
+<img class="phone" src="assets/p_bosai.jpg" alt="防災画面" style="flex: 1 1 220px; margin: 0 auto">
+</div>
+<a class="back" href="#features">↑ できること一覧へ戻る</a>
+</section>
+
+<section class="sec" style="text-align: center">
+<div class="card" style="padding: 32px 24px">
+<p class="h3" style="font-size: 26px">まずは無料で、スマホに入れてみてね。</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 16px">
+<a class="btn" href="#download" style="background: #7dff9a; color: #06210f">Google Playで見る（準備中）</a>
+<a class="btn" href="#price" style="border: 2px solid #7dff9a; color: #7dff9a">料金を見る</a>
+</div>
+</div>
+</section>
+
+<section class="sec">
+<p class="kicker">MORE</p>
+<h2 class="h2">毎日をちょっと便利に。何気ない時間を、ちょっと楽しく。</h2>
+<p class="p">天気も予定も、ニュースも占いも。暮らしに役立つ機能から、不思議な世界への冒険まで。あなたの毎日に、チャーコがそっと寄り添います。</p>
+<div id="f-weather" style="display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; margin-top: 12px">
+<div style="flex: 999 1 480px; min-width: 0; display: grid; gap: 14px">
+<div class="card"><span class="tag both">スマホでもグラスでも</span><h3 class="h3">天気｜今日の服装まで教えてくれる</h3><p class="p" style="margin: 0">自宅のまわり、勤務先、お出かけ先。3か所の天気を、いっぺんにチェックできます。週間予報や3時間ごとの天気も。「今日は長袖にカーディガンがおすすめ」など、服装のひとことも添えてくれます。朝のお出かけ準備が、ちょっと楽になります。</p></div>
+<div class="card" id="f-daily"><span class="tag both">スマホでもグラスでも</span><h3 class="h3">予定｜次に何があるか、ひと目でわかる</h3><p class="p" style="margin: 0">今日の次の予定も、明日の予定も、さっと確認。Googleカレンダーの予定も、そのまま出ます。「明日10時に歯医者」と頼めば、確かめてからカレンダーに入れてくれます。SABERAにつなげば、スマホを取り出さなくてもグラスに表示できます。忙しいときも、大切な予定を忘れず、確認しやすくなります。</p></div>
+<div class="card"><span class="tag both">スマホでもグラスでも</span><h3 class="h3">買い物・やること｜思いついた瞬間にメモ</h3><p class="p" style="margin: 0">「あ、牛乳を買わなきゃ！」そんなときに、すぐ登録。買い忘れや、やり忘れを減らすお手伝いをします。ちょっとした用事も、まとめて管理できます。</p></div>
+<div class="card"><span class="tag both">スマホでもグラスでも</span><h3 class="h3">メモ｜ひらめきを逃さない</h3><p class="p" style="margin: 0">思いついたアイデアや忘れたくないことを、さっと記録。あとから検索で探したり、誰かと共有したりできます。書いた文章をテレプロンプトに送れば、スピーチや動画撮影の原稿としても活躍します。</p></div>
+<div class="card"><span class="tag both">スマホでもグラスでも</span><h3 class="h3">タイマー｜日常の小さな時間管理に</h3><p class="p" style="margin: 0">料理の加熱時間、カップ麺、運動、勉強、仕事の合間の休憩にも。ちょっと時間を計りたいとき、気軽に使える便利な機能です。</p></div>
+</div>
+<div style="flex: 1 1 280px; display: grid; gap: 16px; justify-items: center">
+<img class="glass" src="assets/g_weather.png" alt="グラスの今日の天気">
+<img class="glass" src="assets/g_home.png" alt="グラスのホーム画面（次の予定）">
+</div>
+</div>
+<div id="f-talk" style="display: flex; flex-wrap: wrap; gap: 32px; align-items: center; margin-top: 40px">
+<div style="flex: 999 1 480px; min-width: 0; display: grid; gap: 14px">
+<div class="card"><span class="tag both">スマホでもグラスでも</span><h3 class="h3">チャーコと話す｜ちょっとした疑問から、何気ないおしゃべりまで</h3><p class="p" style="margin: 0">知りたいことを聞いたり、アイデアを相談したり、ただおしゃべりを楽しんだり。いつでも気軽にチャーコに話しかけてください。声でも文字でも話せます。SABERAにつなげば、答えをグラスでも確認できます。</p></div>
+<div class="card"><span class="tag both">スマホでもグラスでも</span><h3 class="h3">チャーコ新聞・チャーコNEWS｜ニュースを、もっと身近に</h3><p class="p" style="margin: 0">毎日の出来事をチェック。チャーコのひとことが添えられているので、ニュースを読む時間にもちょっとした楽しさが生まれます。気になる話題や、みんなが話している話題を見つけるきっかけにも。</p></div>
+</div>
+<img class="phone" src="assets/p_talk.jpg" alt="チャーコと話す画面" style="flex: 1 1 200px; margin: 0 auto">
+</div>
+<div id="f-play" style="display: flex; flex-wrap: wrap; gap: 32px; align-items: center; margin-top: 40px">
+<div style="flex: 999 1 480px; min-width: 0; display: grid; gap: 14px">
+<div class="card"><span class="tag both">スマホでもグラスでも</span><h3 class="h3">都市伝説クイズ｜知っているつもりが、意外と難しい！？</h3><p class="p" style="margin: 0">世界の謎や不思議な伝説に、2択クイズで挑戦！初級・中級・上級の3段階で、気軽に楽しめます。伝説図鑑を埋めたり、称号を集めたり。遊ぶほど、不思議な世界への興味が広がります。</p></div>
+<div class="card"><span class="tag both">スマホでもグラスでも</span><h3 class="h3">探検ナビ｜いつもの街にも、知らない物語がある</h3><p class="p" style="margin: 0">近くの神社やお寺、言い伝えの残る場所を探せます。何気なく通っていた道の先に、思いがけない歴史や不思議な伝承が見つかるかも。休日のお出かけや、ちょっとした寄り道にもおすすめです。</p><p class="muted" style="margin-top: 6px">場所の情報は Wikipedia をもとにしています。</p></div>
+</div>
+<img class="phone" src="assets/p_navi.jpg" alt="探検ナビ画面" style="flex: 1 1 200px; margin: 0 auto">
+</div>
+<a class="back" href="#features">↑ できること一覧へ戻る</a>
+</section>
+
+<section class="sec" id="f-sabera">
+<p class="kicker">WITH SABERA</p>
+<h2 class="h2">SABERAをつなぐと、チャーコが目の前に。</h2>
+<img src="assets/photo.jpg" alt="SABERAグラスとスマホ" style="width: 100%; border-radius: 14px; display: block; margin-bottom: 20px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px">
+<div class="card"><span class="tag glassonly">SABERAをつないだ時だけ</span><h3 class="h3">首をかしげて操作｜手がふさがっていても、画面を切り替え</h3><p class="p" style="margin: 0">スマートグラスならではの操作方法。首の動きで画面を切り替えられるので、手元の操作を減らせます。必要な情報を、もっと自然に確認できます。</p></div>
+<div class="card"><span class="tag glassonly">SABERAをつないだ時だけ</span><h3 class="h3">ASSIST｜会話の中から、忘れたくないことをお手伝い</h3><p class="p" style="margin: 0">会話の内容から、買い物や予定に登録しておくと便利そうなことを見つけて、そっと提案します。「あとで買わなきゃ」「来週の予定を忘れないように」そんな日常のひとことを、便利な記録につなげます。うなずけば入るし、無視すれば何もしません。</p></div>
+</div>
+<div class="card" style="margin-top: 20px; text-align: center; padding: 32px 24px">
+<h3 class="h3" style="font-size: 26px">そして、SABERAがなくても、チャーコと一緒に。</h3>
+<p class="p">スマートグラスを持っていなくても、スマホで楽しめる機能がたくさん。便利な道具として使うのも、チャーコとのおしゃべりを楽しむのも、あなたの自由です。</p>
+<p class="p" style="margin: 0">毎日の暮らしに、ちょっとした便利さと、ちょっとした笑顔を。</p>
+</div>
+<p class="muted" style="margin-top: 14px">SABERA 本体の使い方は <a href="https://sabera.glass/pages/user-manual">ユーザーマニュアル</a>、安全上の注意は <a href="https://sabera.glass/pages/safety-notice">安全上のご注意</a>（どちらも株式会社jig.jp）をご覧ください。</p>
+<a class="back" href="#features">↑ できること一覧へ戻る</a>
+</section>
+
+<section class="sec">
+<p class="kicker">WHO IS CHARCO</p>
+<h2 class="h2">相棒の名前は、チャーコ。</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+<div style="flex: 999 1 480px; min-width: 0">
+<p class="p">チャーコは、あなたのそばにいるAIの相棒。不思議なことや、まだ知らないことが大好きな女の子です。</p>
+<p class="p">今日の天気を教えたり、予定を思い出させたり、ときどき古代遺跡や都市伝説の話で寄り道したり。便利な道具というより、いっしょに毎日をすごす友だちみたいな存在です。</p>
+<p class="p">ふだんは静かにしていて、必要なときだけ声をかけてくれる。そんな、ちょうどいい距離の相棒です。</p>
+</div>
+<img src="assets/icon.png" alt="グラスの中のチャーコ" style="flex: 1 1 200px; max-width: 240px; width: 100%; border-radius: 24px; display: block; margin: 0 auto">
+</div>
+<div class="card" style="margin-top: 32px">
+<h3 class="h3">チャーコは、YouTube から来ました。</h3>
+<p class="p">チャーコは YouTube の「チャーコプロジェクト」で語り手をしています。都市伝説、宇宙、水、記憶、神話、古代文明、そして科学。世界中に残る不思議な記録や物語を、少しずつお話ししています。</p>
+<p class="p">でも、チャーコにはもう一つ、自分自身の物語があります。失われた記憶の欠片を集めながら、自分の謎に近づいていくSFストーリーです。チャンネルのお話とアプリの冒険、その両方に手がかりが隠されているかもしれません。</p>
+<img src="assets/channel.jpg" alt="YouTubeチャンネル Charco Project" style="width: 100%; border-radius: 10px; display: block; margin: 20px 0">
+<div style="position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; overflow: hidden; background: #0a110c">
+<iframe src="https://www.youtube-nocookie.com/embed/26CS5uAFqwk" title="【未来技術】AI、並走する相棒｜第30話【特別回】" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<p class="muted" style="margin-top: 8px">動画が再生されない時は <a href="https://youtu.be/26CS5uAFqwk">YouTube で見る</a></p>
+<p class="p" style="margin-top: 20px">画面の中のチャーコに、もっと近くにいてほしい。その思いから、このアプリは生まれました。チャーコの世界は、これからもいろんな形で広がっていきます。</p>
+<a class="btn" href="https://www.youtube.com/@charco_project" style="background: #7dff9a; color: #06210f">チャンネルを見る</a>
+</div>
+</section>
+
+<section class="sec">
+<p class="kicker">FOR EVERYONE</p>
+<h2 class="h2">誰にとっても、どんな場面でも。</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px">
+<div class="card"><h3 class="h3">首を動かせない、声を出せない。そんなときも。</h3><p class="li">・けがや体の事情で、首を動かすのがむずかしいとき</p><p class="li">・電車の中やオフィスなど、声を出して話しにくいとき</p><p class="li">・まわりがにぎやかで、声がうまく届かないとき</p><p class="p" style="margin: 8px 0 0">SABERAをつないでいても、ほとんどの操作はスマホのタッチでできます。</p></div>
+<div class="card"><h3 class="h3">いつも聞いてる。でも、記録してない。ほとんど黙ってる。</h3><p class="p">ASSIST が聞いた言葉は、スマホの中だけで文字にして、30秒で消します。どこにも保存しません。「黙ってて」と言えば1時間お休み。</p><p class="muted">外に送るのは、あなたが「調べる」と答えた時の一文だけ。設定で選んだ時も、必要な一部だけ。どれも最初はオフです。</p></div>
+<div class="card"><h3 class="h3">大事なものは、スマホの中に</h3><p class="p">買い物リスト、やること、メモ、誕生日は、スマホの中だけに保存します。開発者は、あなたの情報を集めるサーバーを持っていません。</p><p class="muted">チャーコと話す時はあなたのキーで Google の AI に、天気や探検ナビでは地域やまるめた位置だけを、必要な時に送ります。くわしくは<a href="privacy.html">プライバシーポリシー</a>へ。</p></div>
+</div>
+</section>
+
+<section class="sec" id="price">
+<p class="kicker">PRICE</p>
+<h2 class="h2">入れるのは無料。ずっと使える。<br>気に入ったら、980円で全部。</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px">
+<div class="card">
+<h3 class="h3">無料</h3>
+<p class="li">・今日の天気（3時間ごと、服装のひとことつき）</p>
+<p class="li">・防災（警報・台風・地震とスマホの通知）※ずっと無料</p>
+<p class="li">・買い物・やることリスト</p>
+<p class="li">・今日の月とテーマ（天体占い）</p>
+<p class="li">・チャーコとのおしゃべり（1日3回）</p>
+<p class="li">・都市伝説クイズ（1日3問）、大冒険（第1話まで）</p>
+<p class="li" style="margin: 0">・チャーコ新聞（見出しまで）、探検ナビ（近くの場所の一覧まで）</p>
+</div>
+<div class="card" style="border: 2px solid #7dff9a">
+<h3 class="h3">980円（税込・買い切り）で解放</h3>
+<p class="li">・SABERAグラスとの連携：グラスの表示、首の操作、ASSIST</p>
+<p class="li">・週間の天気、お出かけ先の天気</p>
+<p class="li">・天体占いの星読み、運勢、ラッキーカラー・アイテム</p>
+<p class="li">・ボイスレコーダー、メモ、テレプロンプト、タイマー</p>
+<p class="li">・おしゃべりが回数の制限なしに。チャーコNEWS、新聞の要約</p>
+<p class="li" style="margin: 0">・クイズは毎日レベルごとに新しい10問。大冒険のつづき。探検ナビの言い伝えと探検図鑑</p>
+</div>
+</div>
+<p class="p" style="margin-top: 20px">月額料金も、広告もありません。一度買えば、ずっと使えます。</p>
+<p class="muted">※Android 12 以上（ASSIST は Android 13 以上）。iPhone には今は対応していません。※チャーコと話す機能は、ご自身で取る無料の AI のキー（Google Gemini）を使います。※18歳以上の方を対象にしています。</p>
+</section>
+
+<section class="sec">
+<p class="kicker">FAQ</p>
+<h2 class="h2">よくある質問</h2>
+<div style="display: grid; gap: 12px">
+<div class="card"><h3 class="h3">Q. 防災の知らせは、すぐに届きますか？</h3><p class="p" style="margin: 0">スマホの省電力のため、夜中などは知らせが遅れることがあります。命に関わる知らせは、スマホの『緊急速報メール』もオンにしておいてね。夜も早く知らせるには、電池の最適化からチャーコを外してね</p></div>
+<div class="card"><h3 class="h3">Q. SABERAがなくても使えますか？</h3><p class="p" style="margin: 0">はい、スマホだけで使えます。980円で解放すると、首の操作とASSIST以外のほぼ全部の機能が、スマホの画面で使えます。</p></div>
+<div class="card"><h3 class="h3">Q. 対応している機種は？</h3><p class="p" style="margin: 0">Android 12 以上のスマホで使えます。ASSIST は Android 13 以上が必要です。iPhone には今は対応していません。</p></div>
+<div class="card"><h3 class="h3">Q. 「AIのキー」って何ですか？お金はかかりますか？</h3><p class="p" style="margin: 0">チャーコと話すために使う、Googleの無料のAI（Gemini）の鍵です。Googleアカウントがあれば無料で取れます。支払いの設定をしない限り、料金はかかりません。無料のキーでは、送った文がGoogleのサービス改善に使われることがあります。仕事の秘密や個人情報は話さないでね。</p></div>
+<div class="card"><h3 class="h3">Q. AIのキーの取り方と入れ方は？</h3><p class="li">1. はじめてアプリを開くと、セットアップの「AIのキー」の画面が出ます。</p><p class="li">2. 「キーを作るページを開く」から Google のページを開き、キーを作ってコピーします。</p><p class="li">3. アプリに戻ると「コピーしたキーを貼り付ける？」と出るので、「貼り付ける」を押します。</p><p class="li">4. 「テスト」を押して、チャーコが返事をしたら完了です。</p><p class="muted">あとから入れ直す時は、ホーム右上の歯車（設定）→「セットアップ」→「AIのキー」から。キーは、ほかの人に教えないでください。</p></div>
+<div class="card"><h3 class="h3">Q. スマホを買いかえたら？</h3><p class="li">・980円の解放は、同じ Google アカウントなら、設定の「購入を戻す」で戻せます。</p><p class="li">・買い物・やること、大冒険の記録は、スマホの Google バックアップがオンなら移ります。</p><p class="li">・AIのキーは、安全のためバックアップしていません。新しいスマホで入れ直してください。</p><p class="li" style="margin: 0">・メモとチャーコの記憶は、今は新しいスマホに読み込めません。</p></div>
+<div class="card"><h3 class="h3">Q. 返金はできますか？</h3><p class="p" style="margin: 0">Google Playの返金のルールにしたがいます。</p></div>
+<div class="card"><h3 class="h3">Q. YouTubeのチャーコと同じチャーコですか？</h3><p class="p" style="margin: 0">はい。YouTube「チャーコプロジェクト」の語り手のチャーコです。</p></div>
+</div>
+</section>
+
+<section class="sec" id="download" style="text-align: center">
+<img src="assets/icon.png" alt="いつでもチャーコAR アイコン" style="width: 120px; height: 120px; border-radius: 28px; display: block; margin: 0 auto 20px">
+<h2 class="h2">便利だから使う。楽しいから開く。<br>そして、いつの間にかチャーコが相棒に。</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 12px">
+<a class="btn" href="#play" style="background: #7dff9a; color: #06210f">Google Playで見る（準備中）</a>
+</div>
+<div class="card" id="tester" style="margin-top: 40px; padding: 32px 24px">
+<h3 class="h3" style="font-size: 26px">テスター募集中</h3>
+<p class="p">公開前のテストに参加してくれる方を募集しています。参加してくれた方には、正式公開後に全機能の解放をプレゼントします。</p>
+<a class="btn" href="https://forms.gle/qzrTRjEkA2dos8YF9" target="_blank" rel="noopener" style="background: #7dff9a; color: #06210f">テスターに申し込む</a>
+</div>
+</section>
+
+<footer class="sec" style="padding-top: 72px">
+<div class="card" style="border-color: #6b5a1a; background: #15130a">
+<p class="p" style="margin: 0; color: #f3e6a8">運転中や自転車に乗っている時は、グラスやスマホの画面を見たり、操作したりしないでね。</p>
+<p class="p" style="margin: 8px 0 0; color: #f3e6a8">SABERA 本体の安全上の注意は、株式会社jig.jpの「<a href="https://sabera.glass/pages/safety-notice">安全上のご注意</a>」を見てね。</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; margin-top: 32px; border-top: 1px solid #1f3a24; padding-top: 24px">
+<p class="p" style="margin: 0">お問い合わせ：<a href="mailto:charcoproject@gmail.com">charcoproject@gmail.com</a></p>
+<div style="display: flex; gap: 20px; flex-wrap: wrap">
+<a href="privacy.html">プライバシーポリシー</a>
+<a href="terms.html">利用規約</a>
+<a href="https://www.youtube.com/@charco_project">YouTube</a>
+</div>
+</div>
+<p class="muted" style="margin-top: 20px">© Charco Project　本アプリは個人が開発したもので、SABERA の公式アプリではありません。</p>
+</footer>
+
+</div>
+
+</body>
+</html>
