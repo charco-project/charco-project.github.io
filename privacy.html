@@ -12,7 +12,9 @@ h1,h2{font-family:'DotGothic16',sans-serif;color:#7dff9a;font-weight:400;line-he
 h1{font-size:clamp(28px,6vw,40px)}h2{font-size:clamp(22px,4.5vw,28px);margin-top:48px}
 a{color:#7dff9a}table{width:100%;border-collapse:collapse;font-size:15px;display:block;overflow-x:auto}
 th,td{border:1px solid #1f3a24;padding:8px 10px;text-align:left;vertical-align:top}th{background:#0d140f;color:#7dff9a}
-.top{display:inline-flex;min-height:44px;align-items:center}</style>
+.top{display:inline-flex;min-height:44px;align-items:center}
+.delete{border:2px solid #7dff9a;border-radius:8px;padding:4px 20px 12px;margin-top:32px;background:#0d140f}
+.delete h2{margin-top:16px}h3{color:#7dff9a;font-size:19px;margin:24px 0 4px}.jump a{display:inline-flex;min-height:44px;align-items:center;font-weight:700}</style>
 </head>
 <body>
 <main>
@@ -20,6 +22,35 @@ th,td{border:1px solid #1f3a24;padding:8px 10px;text-align:left;vertical-align:t
 <h1>プライバシーポリシー</h1>
 <p>制定日：2026年11月16日　最終改定日：2026年11月16日</p>
 <p>Charco Project（以下「開発者」）は、Android アプリ「いつでもチャーコAR」（以下「本アプリ」）での利用者の情報の扱いを、次のとおり定めます。</p>
+<p class="jump"><a href="#delete">データの削除の方法は、こちら（データの削除）</a></p>
+<section class="delete" aria-labelledby="delete">
+<h2 id="delete">データの削除（いつでもチャーコAR／Charco Project）</h2>
+<p>Android アプリ「いつでもチャーコAR」（開発：Charco Project）のデータを消す方法です。本アプリにはアカウントがなく、開発者は利用者の情報を集めるサーバーを持っていません。そのため、本アプリのデータは、利用者のスマートフォンの中にしかありません（外部のサービスに送ったものを除きます）。</p>
+<h3>消し方</h3>
+<ol>
+<li><strong>アプリの中で消す</strong>：
+<ul>
+<li>チャーコの記憶：設定の「チャーコの記憶」から、1件ずつ、または全部消せます。</li>
+<li>会話：「チャーコと話す」の画面の「会話を消す」で消せます。設定の「会話を残す」をオフにしても消えます。</li>
+<li>探検ナビの記録：設定の「探検ナビの記録」から、1件ずつ、または全部消せます。</li>
+<li>AIのキー：設定の「セットアップ」の「AIのキーを消す」で消せます。</li>
+<li>買い物リスト、やること、メモ、録音、天体占いの誕生日、登録した地点：それぞれの画面で消せます。</li>
+</ul></li>
+<li><strong>全部まとめて消す</strong>：スマートフォンの「設定」→「アプリ」→「いつでもチャーコAR」→「ストレージとキャッシュ」→「ストレージを消去」で、アプリの中のデータが全部消えます。<strong>本アプリをアンインストールしても、アプリの中のデータは全部消えます。</strong></li>
+<li><strong>アプリの外に残るもの</strong>：メモ（「Documents/チャーコネタ帳」フォルダ）、「保存」を押した録音（「Music/チャーコ」フォルダ）、カレンダーに入れた予定は、スマートフォンの共有の場所にあるため、アンインストールしても残ります。不要な時は、ファイルのアプリやカレンダーのアプリで消してください。スマートフォンの Google バックアップに含まれた分は、Google アカウントのバックアップの設定から消せます。</li>
+<li><strong>問い合わせ</strong>：消し方がわからない時や、問い合わせのメールを消してほしい時は、charcoproject@gmail.com（Charco Project）までご連絡ください。</li>
+</ol>
+<h3>消えるデータ</h3>
+<p>「3. スマートフォンの中に保存する情報」の情報（買い物リスト、やること、チャーコの記憶、会話、AIのキー、登録した地点、ゲームの記録、録音、アプリの動作の記録など）は、上の方法ですべて消えます。開発者の手元には、もともとありません。</p>
+<h3>消えずに残るデータと、残る期間</h3>
+<p>機能を使った時に外部のサービスに送ったもの（「4. 外部に送る情報」）は、本アプリやスマートフォンのデータを消しても、送り先からは消えません。送り先のサービスが、それぞれの利用規約・プライバシーポリシーにしたがって保存し、保存する期間も送り先が決めます。開発者が代わりに消すことはできません。</p>
+<ul>
+<li><strong>Google（Gemini API）</strong>：会話の文などは、利用者自身のキーで Google に送られ、Google の決まりにしたがって保存されます。無料のキーでは、サービス改善のために使われることがあります。文字起こしに送った録音のファイルは、終わったら Google 側から消すようにしています（消せなかった時も、Gemini API の決まりで約48時間後に消えます）。</li>
+<li><strong>Google（スマートフォンの音声認識）、Google Play（購入の情報・課金の仕組みの診断情報）</strong>：Google の決まりにしたがいます。購入の記録は、Google Play の購入履歴に残ります。</li>
+<li><strong>気象庁、Open-Meteo、国土地理院、Wikimedia、Yahoo!ニュース、Google ニュース</strong>：送るのは地域の番号、丸めた位置、場所の名前などで、利用者の名前やアカウントは送りません。各サービスのアクセスの記録として、各サービスの決まりにしたがって保存されることがあります。</li>
+<li><strong>問い合わせのメール</strong>：開発者が持つ唯一の情報です。問い合わせが片づいてから1年で削除します。それより早く消してほしい時は、上の問い合わせ先までご連絡ください。</li>
+</ul>
+</section>
 <h2>1. 開発者</h2>
 <ul>
 <li>名称：Charco Project（個人での開発・運営）</li>
@@ -31,7 +62,7 @@ th,td{border:1px solid #1f3a24;padding:8px 10px;text-align:left;vertical-align:t
 <li>本アプリのデータは、できるかぎり利用者のスマートフォンの中だけで扱います。</li>
 <li>開発者は、利用者の情報を集めるためのサーバーを持っていません。本アプリが使う情報を、開発者が受け取ることはありません（問い合わせをいただいた場合を除きます）。</li>
 <li>広告は入っていません。クラッシュ報告や利用状況の分析の仕組み（Firebase など）も入れていません。広告や分析のために、情報を外部に送ることはありません。</li>
-<li>ただし、980円の解放の購入に使う Google Play の課金の仕組み（Google Play Billing Library）は、Google の定めにしたがって、購入の処理に関わる情報を Google に送ることがあります。</li>
+<li>ただし、980円の解放の購入に使う Google Play の課金の仕組み（Google Play Billing Library）は、Google の定めにしたがって、購入の処理に関わる情報と、課金の仕組みの動作状況の診断情報（購入画面を出せたか、Google Play とのつながりの不具合など）を Google に送ることがあります。</li>
 <li>外部に送るのは、機能に必要な時だけです。送る先と中身は「4. 外部に送る情報」にすべて書いています。</li>
 </ul>
 <h2>3. スマートフォンの中に保存する情報</h2>
@@ -182,8 +213,8 @@ th,td{border:1px solid #1f3a24;padding:8px 10px;text-align:left;vertical-align:t
 </tr>
 <tr>
 <td>Google Play</td>
-<td>購入の情報</td>
-<td>980円の解放を購入・復元する時（支払いは Google Play が扱い、開発者はカード情報などを受け取りません）</td>
+<td>購入の情報、課金の仕組みの診断情報</td>
+<td>980円の解放を購入・復元する時（支払いは Google Play が扱い、開発者はカード情報などを受け取りません）。課金の仕組みの動作状況の診断情報も、Google に送られることがあります</td>
 </tr>
 </tbody>
 </table>
@@ -267,7 +298,7 @@ th,td{border:1px solid #1f3a24;padding:8px 10px;text-align:left;vertical-align:t
 <h2>12. 問い合わせでいただいた情報</h2>
 <p>メールで問い合わせをいただいた場合、メールアドレスと内容は、返信と本アプリの改善のためだけに使います。法令にもとづく場合を除き、本人の同意なく第三者に渡すことはありません。不要になったメールは、問い合わせが片づいてから1年で削除します。</p>
 <h2>13. 開示・訂正・削除などのお申し出</h2>
-<p>開発者は、問い合わせのメール以外に利用者の情報を持っていません。スマートフォンの中の情報は、利用者自身がアプリで消すか、アプリを削除して消せます。問い合わせのメールの開示や削除などを希望される場合は、charcoproject@gmail.com までご連絡ください。ご本人であることを確かめたうえで、法令にしたがって対応します。</p>
+<p>開発者は、問い合わせのメール以外に利用者の情報を持っていません。スマートフォンの中の情報は、利用者自身がアプリで消すか、アプリを削除して消せます（くわしくは<a href="#delete">「データの削除」</a>）。問い合わせのメールの開示や削除などを希望される場合は、charcoproject@gmail.com までご連絡ください。ご本人であることを確かめたうえで、法令にしたがって対応します。</p>
 <h2>14. このポリシーの変更</h2>
 <p>本アプリの機能や法令の変更にあわせて、このポリシーを変更することがあります。変更した時は、このページでお知らせします。外部に送る情報が増えるなど大きな変更の時は、本アプリの中でもお知らせします。</p>
 <p><a class="top" href="index.html">← いつでもチャーコAR トップへ</a></p>
