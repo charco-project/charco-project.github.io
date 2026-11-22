@@ -43,6 +43,19 @@ a{color:#7dff9a}a:hover{color:#b8ffc8}
 .back{display:inline-flex;align-items:center;min-height:44px;color:#a9bdb0;font-size:14px;text-decoration:none;margin-top:20px}
 .back:hover{color:#7dff9a}
 @media (min-width:768px){.g75{width:75%;margin-left:auto;margin-right:auto}}
+/* グラスの見え方ギャラリー（スマホは横にスワイプ、パソコンは横一列） */
+.gshots{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 10px;margin:0 0 20px;-webkit-overflow-scrolling:touch}
+.gshots figure{flex:0 0 min(62vw,220px);margin:0;scroll-snap-align:start}
+.gshots button{display:block;width:100%;padding:0;border:1px solid #1f3a24;border-radius:10px;background:#000;cursor:zoom-in;overflow:hidden}
+.gshots button:focus-visible{outline:2px solid #7dff9a;outline-offset:2px}
+.gshots img{display:block;width:100%;height:auto;aspect-ratio:16/10}
+.gshots figcaption{color:#a9bdb0;font-size:13px;text-align:center;margin-top:6px}
+@media (min-width:900px){.gshots{overflow-x:visible}.gshots figure{flex:1 1 0;min-width:0}}
+.gview{border:none;padding:0;background:transparent;max-width:min(92vw,900px);width:100%}
+.gview::backdrop{background:rgba(0,0,0,.85)}
+.gview img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid #1f3a24}
+.gview p{color:#e6f2ea;text-align:center;margin:10px 0 0;font-size:15px}
+.gview .close{display:block;margin:12px auto 0;min-height:44px;padding:0 24px;border-radius:999px;border:2px solid #7dff9a;background:transparent;color:#7dff9a;font-size:15px;cursor:pointer}
 </style>
 
 </head>
@@ -278,6 +291,30 @@ a{color:#7dff9a}a:hover{color:#b8ffc8}
 <p class="p">スマホを取り出さなくても、チャーコの表情や言葉が目の前に。一緒にお出かけしたり、仕事をしたり、不思議な世界を冒険したり。</p>
 <p class="p">SABERAがあれば、もっと便利に、もっと楽しく。チャーコと一緒に過ごす毎日を、より身近に感じられます。</p>
 <img src="assets/photo.jpg" alt="SABERAグラスとスマホ" style="width: 100%; border-radius: 14px; display: block; margin-bottom: 20px">
+<p class="cat" style="margin: 0 0 10px">グラスでは、こんなふうに見えます</p>
+<div class="gshots">
+<figure><button type="button" data-big="assets/glass/home-l.png" data-name="ホーム" aria-label="ホームを大きく見る"><img src="assets/glass/home-s.png" width="360" height="225" loading="lazy" alt="グラスのホームの画面"></button><figcaption>ホーム</figcaption></figure>
+<figure><button type="button" data-big="assets/glass/tele-l.png" data-name="テレプロンプト" aria-label="テレプロンプトを大きく見る"><img src="assets/glass/tele-s.png" width="360" height="225" loading="lazy" alt="グラスのテレプロンプトの画面"></button><figcaption>テレプロンプト</figcaption></figure>
+<figure><button type="button" data-big="assets/glass/schedule-l.png" data-name="明日の予定" aria-label="明日の予定を大きく見る"><img src="assets/glass/schedule-s.png" width="360" height="225" loading="lazy" alt="グラスの明日の予定の画面"></button><figcaption>明日の予定</figcaption></figure>
+<figure><button type="button" data-big="assets/glass/weather-l.png" data-name="今日の天気" aria-label="今日の天気を大きく見る"><img src="assets/glass/weather-s.png" width="360" height="225" loading="lazy" alt="グラスの今日の天気の画面"></button><figcaption>今日の天気</figcaption></figure>
+<figure><button type="button" data-big="assets/glass/quiz-l.png" data-name="都市伝説クイズ" aria-label="都市伝説クイズを大きく見る"><img src="assets/glass/quiz-s.png" width="360" height="225" loading="lazy" alt="グラスの都市伝説クイズの画面"></button><figcaption>都市伝説クイズ</figcaption></figure>
+</div>
+<dialog class="gview" id="gview"><img src="" alt=""><p></p><button type="button" class="close">閉じる</button></dialog>
+<script>
+(function () {
+  var d = document.getElementById('gview');
+  if (!d || !d.showModal) return;
+  var img = d.querySelector('img'), cap = d.querySelector('p');
+  document.querySelectorAll('.gshots button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      img.src = b.dataset.big; img.alt = 'グラスの' + b.dataset.name + 'の画面'; cap.textContent = b.dataset.name;
+      d.showModal();
+    });
+  });
+  d.querySelector('.close').addEventListener('click', function () { d.close(); });
+  d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
+})();
+</script>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px">
 <div class="card"><span class="tag glassonly">SABERAをつないだ時だけ</span><h3 class="h3">首をかしげて操作｜手がふさがっていても、画面を切り替え</h3><p class="p" style="margin: 0">スマートグラスならではの操作方法。首の動きで画面を切り替えられるので、手元の操作を減らせます。必要な情報を、もっと自然に確認できます。</p></div>
 <div class="card"><span class="tag glassonly">SABERAをつないだ時だけ</span><h3 class="h3">ASSIST｜会話の中から、忘れたくないことをお手伝い</h3><p class="p" style="margin: 0">会話の内容から、買い物や予定に登録しておくと便利そうなことを見つけて、そっと提案します。「あとで買わなきゃ」「来週の予定を忘れないように」そんな日常のひとことを、便利な記録につなげます。うなずくか右にかしげると入り、何もしなければそのままです。</p></div>
